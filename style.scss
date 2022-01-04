@@ -1,0 +1,436 @@
+body {
+  font-family: 'Sawarabi Mincho', serif;
+
+  color: #121212;
+  zoom: 0.9;
+}
+
+.message {
+  background-color: #fbfaf7;
+  border: none;
+}
+
+.date {
+  background-color: #fbfaf1;
+}
+
+.rsvp {
+  background-color: #efe8de;
+}
+
+.ffJosefin {
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+#sent {
+  display: none;
+}
+
+header {
+  background-image: url(./img/header_backimg.jpg);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: cover;
+  height: 110vh;
+
+  div {
+    nav {
+      z-index: 100;
+      background-color: #eeeeee;
+    }
+    .scroll {
+      position: absolute;
+      width: 100%;
+      bottom: 20px;
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+}
+
+main {
+  section {
+    .innerWrap {
+      margin: 0 auto;
+      text-align: center;
+      max-width: 1240px;
+      padding: 30px 30px 0;
+
+      h2 {
+        font-size: 36px;
+        letter-spacing: 0.05em;
+        margin-bottom: 40px;
+      }
+
+      .message-contents {
+        font-size: 20px;
+        span {
+          float: right;
+          margin-right: 180px;
+        }
+      }
+
+      .message-name {
+        font-size: 22px;
+        letter-spacing: 0.1em;
+        span {
+          letter-spacing: 0.2em;
+        }
+        span + span {
+          margin-left: 20px;
+        }
+      }
+
+      .slideBox {
+        overflow: hidden;
+        position: relative;
+        height: 600px;
+
+        .our {
+          object-fit: cover;
+          position: absolute;
+          height: 600px;
+          top: 0;
+          left: 190px;
+          border: outset 7px #ffdead;
+          border-radius: 25%;
+          -webkit-animation: anime 9s 0s infinite;
+          animation: anime 9s 0s infinite;
+        }
+        .our:nth-of-type(2) {
+          -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+        }
+
+        .our:nth-of-type(3) {
+          -webkit-animation-delay: 6s;
+          animation-delay: 6s;
+        }
+
+        /* ふわっとアニメーション */
+        @keyframes anime {
+          0% {
+            opacity: 0;
+          }
+          30% {
+            opacity: 1;
+          }
+          35% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+            z-index: 9;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+
+        @-webkit-keyframes anime {
+          0% {
+            opacity: 0;
+          }
+          30% {
+            opacity: 1;
+          }
+          35% {
+            opacity: 1;
+          }
+          50% {
+            opacity: 0;
+            z-index: 9;
+          }
+          100% {
+            opacity: 0;
+          }
+        }
+      }
+
+      .layoutWrap {
+        display: flex;
+        width: 1100px;
+        margin: 0 auto;
+        padding-bottom: 40px;
+        .date-img {
+          flex-basis: 700px;
+        }
+        .date-container {
+          flex-basis: 400px;
+
+          .date-contents {
+            display: inline-block;
+            font-size: 60px;
+            padding: 30px 30px;
+            margin-top: 80px;
+            margin-left: -350px;
+            background-color: #fbfaf1;
+          }
+
+          .word1 {
+            font-size: 50px;
+            letter-spacing: 0.01em;
+          }
+          .word2 {
+            font-size: 40px;
+          }
+          .word3 {
+            font-size: 60px;
+          }
+
+          .access-container {
+            margin-top: 30px;
+            padding-left: 10px;
+            h3 {
+              font-size: 36px;
+              color: #cfafa3;
+              text-align: left;
+            }
+            p {
+              strong {
+                font-size: 24px;
+              }
+              font-size: 22px;
+              padding-top: 20px;
+              text-align: left;
+
+              a {
+                font-weight: 700;
+                font-size: 24px;
+              }
+            }
+          }
+        }
+      }
+
+      form {
+        width: 600px;
+        margin: 0 auto;
+        padding-bottom: 50px;
+        font-size: 20px;
+        background-color: #efe8d9;
+
+        p {
+          line-height: 1.4;
+          margin-bottom: 20px;
+        }
+        input[type='text'],
+        input[type='email'],
+        textarea {
+          border: 1px solid #cccccc;
+          background: #fff;
+          width: 100%;
+          padding: 8px 12px;
+          text-align: left;
+        }
+        label {
+          margin-right: 30px;
+          font-size: 24px;
+          input[type='radio'] {
+            width: 16px;
+            height: 16px;
+            vertical-align: baseline;
+            margin-bottom: 20px;
+          }
+        }
+        input[type='button'] {
+          font-size: 20px;
+          padding: 10px 60px;
+          color: 121212;
+          background-color: #eeeeee;
+          border: 1px solid #121212;
+        }
+        input[type='button']:hover {
+          color: #eeeeee;
+          background-color: #121212;
+          transition-property: all;
+          transition-duration: 300ms;
+          transition-timing-function: ease-in;
+          transition-delay: 0ms;
+        }
+      }
+    }
+  }
+  .date {
+    margin-bottom: 400px;
+  }
+
+  .date :after {
+    content: '';
+    background-image: url(./img/scroll_backimg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: -1;
+  }
+}
+
+footer {
+  background-color: #eeeeee;
+  div {
+    p {
+      text-align: center;
+      margin: auto 0;
+      font-size: 16px;
+      padding: 14px 10px 20px;
+    }
+  }
+}
+
+@media screen and(max-width:1100px) {
+  header {
+    background-image: url(./img/header_backimg.jpg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: cover;
+    height: 60vh;
+    .scroll {
+      display: none;
+    }
+  }
+
+  main {
+    section {
+      .innerWrap {
+        text-align: center;
+        width: 100%;
+        padding: 30px 30px 0;
+
+        h2 {
+          font-size: 36px;
+          letter-spacing: 0.05em;
+          margin-bottom: 40px;
+        }
+
+        .message-contents {
+          display: inline-block;
+          font-size: 16px;
+          text-align: left;
+          span {
+            margin-right: 0px;
+          }
+        }
+
+        .message-name {
+          font-size: 18px;
+          letter-spacing: 0.1em;
+          span {
+            letter-spacing: 0.2em;
+          }
+          span + span {
+            margin-left: 20px;
+          }
+        }
+        .slideBox {
+          width: 90vw;
+          height: calc(90vw * 0.75);
+          margin: auto;
+
+          .our {
+            width: 90vw;
+            height: calc(90vw * 0.75);
+            border: outset 7px #ffdead;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+        }
+        .layoutWrap {
+          width: 100%;
+          padding-bottom: 40px;
+          display: flex;
+          flex-direction: column;
+          .date-img {
+            flex-basis: 0px;
+            width: 100%;
+            img {
+              width: 100%;
+            }
+          }
+          .date-container {
+            flex-basis: 0px;
+          }
+          .date-container {
+            .date-contents {
+              font-size: 40px;
+              padding: 10px 10px;
+              margin-top: 0px;
+              margin-left: 0px;
+              background-color: #fbfaf1;
+              font-weight: 500;
+            }
+
+            .word1 {
+              font-size: 25px;
+            }
+            .word2 {
+              font-size: 20px;
+            }
+            .word3 {
+              font-size: 30px;
+            }
+
+            .access-container {
+              margin-top: 20px;
+              border: 1px dotted #e7c70f;
+              padding: 10px;
+              h3 {
+                font-size: 28px;
+                text-align: center;
+              }
+              p {
+                font-size: 18px;
+                text-align: center;
+                a {
+                  font-size: 20px;
+                }
+              }
+            }
+          }
+        }
+
+        form {
+          width: 100%;
+          p {
+            font-size: 18px;
+
+            .allerygydesc {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+    .date {
+      margin-bottom: 200px;
+    }
+
+    .date :after {
+      content: '';
+      background-position: left;
+      background-repeat: repeat;
+      background-size: contain;
+    }
+  }
+}
+
+@media screen and(max-width:340px) {
+  main {
+    section {
+      .innerWrap {
+        .message-name {
+          span + span {
+            margin-left: 10px;
+          }
+        }
+      }
+    }
+  }
+}
